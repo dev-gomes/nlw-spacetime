@@ -7,6 +7,7 @@ import cors from '@fastify/cors'
 import jwt from '@fastify/jwt'
 import multipart from '@fastify/multipart'
 
+import { userRoutes } from './routes/user'
 import { memoriesRoutes } from './routes/memories'
 import { authRoutes } from './routes/auth'
 import { uploadRoutes } from './routes/upload'
@@ -30,6 +31,7 @@ app.register(jwt, {
 
 app.register(authRoutes)
 app.register(uploadRoutes)
+app.register(userRoutes)
 app.register(memoriesRoutes)
 
 app
